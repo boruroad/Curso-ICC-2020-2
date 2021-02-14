@@ -1,0 +1,167 @@
+\documentclass{article}
+\usepackage[top=2cm,bottom=2cm,left=2cm,rigth=2cm,heightrounded]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{schemata}
+\usepackage{latexsym}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+
+\title{Tarea 2 \\Introducción a Ciencias de la Computación }
+\author{Roberto Adrián Bonilla Ruiz}
+\date{5 de Marzo 2020}
+
+\begin{document}
+
+\maketitle
+%\large
+\normalsize\textbf{Basado en la especificación, encuentre las clases, objetos y resposabilidades} 
+
+\centerline\textbf{\rhd \; \textbf{SUSTANTIVOS: }} 
+{Cliente, sistema, calculadora, operaciones, universidad, resultado, nùmeros,}\\,\qquad \qquad  \qquad \qquad \qquad { \; \; \; \; estilo, alumno, logo, director.} \\
+
+
+
+
+%\begin{}
+     {\rhd \; \textbf{CLASE: }} Calculadora\\
+     
+     {\rhd \; \textbf{OBJETO: }} Calculadora \\
+     
+     {\rhd \; \textbf{RESPONSABILIDADES: }} {sumar, restar, multiplicar, dividir, módulo, sumarBinaria,}
+     \\   { \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad sumarPostfijo, sumarSufijo, ordenar, restarBinaria, restarSufija,} \\ {\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad restaPostfija.} \\
+     
+%\end{}
+
+\newpage
+\centering
+\large\textbf{Realiza el análisis y diseño, el sistema incluye además las tarjetas de responsabilidades y los diagramas de Warner-Orr.} \\
+
+
+\begin{table}[h!]
+        \centering
+         
+        \begin{tabular}{ | p{14.9cm} |}
+        \hline
+            \begin{center} \textbf{CLASE: Calculadora} \end{center} 
+            \end{tabular}
+            
+        \begin{tabular}{| p{2 cm} | p{12.5cm} |}        
+        \hline
+        % 4 y 9.5 cm
+        
+        \begin{center} \textbf{Privados} \end{center} & {}
+         \\\hline 
+         
+         
+        \begin{center} \textbf{Publicos} \end{center} & 
+        \begin{enumerate}
+            \item \textbf{sumarBinaria:}{ Recibe dos números enteros, los suma y devuelve su resultado }  
+            
+         \item  \textbf{restarBinaria:}{Recibe dos números enteros, los resta y devuelve su resultado}  
+         
+         \item  \textbf{multiplicar: } { Recibe dos números enteros, los multiplica y devuelve su producto}  
+         
+         \item  \textbf{dividir:} Recibe dos números enteros, los divide y devuelve su resultado
+          
+         
+         
+         \item  \textbf{modular:} Recibe dos números enteros, los divide y devuelve su devuelve el residuo de la división 
+          
+         
+         \item  \textbf{sumarPostfijo: } 
+        Recibe dos números enteros y realiza la suma de manera postfija.
+        
+         \item  \textbf{restarPostfijo: }  Recibe dos números enteros y realiza la resta de manera postfija
+         
+         
+         \item  \textbf{sumarSufijo: } Recibe dos números enteros y realiza la suma de manera sufija
+         
+         \item  \textbf{restarSufijo: } Recibe dos números enteros y realiza la resta de manera sufija 
+         
+         \item  \textbf{orden: } Recibe tres números enteros,busca el mayor, menor y compara si dos o más números son iguales.
+       
+        \end{enumerate}
+          
+         
+         
+         \\\hline
+    \end{tabular}
+    \caption{Tarjeta de responsabilidades de la clase Calculadora.}
+\end{table}
+
+
+\\
+\\
+\\
+\vspace{}
+
+
+\newpage
+\centering\textbf{{DIAGRAMA DE WARNER - ORR} \\}{Operaciones Aritméticas y \\Lógicas} \\\
+
+
+\footnotesize\newcommand\diagram[2]{\schema{\schemabox{#1}}{\schemabox{#2}}}
+   \diagram{\boldalert{Operaciones Aritméticas}\\
+   {y Lógicas}}
+{
+\diagram{sumarBinaria}{Recibe a y b números enteros \\ Suma a y b \\ Devuelve resultado}\\
+{}\\
+{}\\
+
+\diagram{restarBinaria}{Recibe a y b números enteros \\ Resta a y b \\ Devuelve resultado} \\
+{}\\
+{}\\
+
+\diagram{multiplicar}{Recibe a y b números enteros \\ 
+Multiplica a y b \diagram{}{Guardar la multiplicación en \\ la variable resultado} \\  Devuelve resultado} \\
+{}\\
+{}\\
+
+\diagram{dividir}{Recibe a y b números enteros \\ Divide a y b \\ Devuelve resultado} \\
+{}\\
+{}\\
+
+\diagram{modulo}{Recibe a y b números enteros \\ 
+Divide a y b \diagram{}{Guarda el residuo de la división en \\ la variable resultado} \\  Devuelve resultado} \\
+{}\\
+{}\\
+
+\diagram{sumarPostfija }{Recibe a y b números enteros \\ Aplica suma postfija a cada nùmero \\ Suma a y b con postfijo \\ Devuelve resultado }\\
+{}\\
+{}\\
+
+\diagram{restarPostfija }{Recibe a y b números enteros \\ Aplica resta postfija a cada nùmero \\ Resta a y b con postfijo \\ Devuelve resultado }\\
+{}\\
+{}\\
+
+\diagram{sumarSufija }{Recibe a y b números enteros \\ Aplica suma sufija a cada nùmero \\ Suma a y b con sufijo \\ Devuelve resultado}\\
+{}\\
+{}\\
+
+\diagram{restarSufija }{Recibe a y b números enteros \\ Aplica resta postfija a cada nùmero \\ Resta a y b con postfijo \\ Devuelve resultado }\\
+{}\\
+{}\\
+
+
+
+\diagram{orden}{Recibe a b y c números enteros \\ Elige el mayor de los tres \\ Devuelve el número\diagram{}{Mayor\\ Menor \\ Compara si es que son iguales o no} \\ { Devuelve resultado}
+
+}
+
+{}\\
+{}\\
+
+\diagram{conjunción }{Recibe a y b valores de verdad \\ Realiza la conjuncion\\ Devuelve resultado booleano }\\
+{}\\
+{}\\
+
+\diagram{disyunción}{Recibe a y b valores de verdad \\ Realiza la disyuncion\\ Devuelve resultado booleano }\\
+{}\\
+{}\\
+
+}
+
+\end{document}

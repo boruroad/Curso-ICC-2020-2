@@ -1,0 +1,93 @@
+\documentclass[a4paper]{article}
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,rigth=2.5cm,heightrounded]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{pifont}
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\tcbuselibrary{listingsutf8}
+\usepackage[hidelinks]{hyperref}
+
+
+% Definir cuadro de ancho del texto
+
+% OPCIONES
+% colback: color de fondo
+% colframe: color de borde
+% fonttitle: estilo de título
+% title: título de la cuadro o referencia a argumento
+
+\title{Introducción a Ciencias de la Computación \\Tarea 6: Herencia y polimorfismo}
+
+\author{\large Bonilla Ruiz Roberto Adrián}
+
+\date{\large Fecha de entrega: 14 de Mayo 2020}
+
+\begin{document}
+\maketitle
+
+
+\newtcolorbox[auto counter,number within=section]{example}[2][]
+{colback=white!5!white,colframe=green!75!black,fonttitle=\bfseries, title=~}
+
+\begin{enumerate}
+
+
+\\ 
+%\section{Ejemplos}
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+\item\large\textbf{Sopita de letras 
+\smallskip} \\ 
+{ Encuentra en la sopa de letras las palabras que acompletan las siguientes frases:\\
+(Marcalas en la sopa de letra y acompleta las frases)\\
+  
+}
+
+\includegraphics[width=1.0\textwidth]{abc.png}
+
+\end{example}\medskip
+\end{enumerate}
+
+\begin{example}
+
+{1. Las clases Padres también son llamadas ''Clase base'' ó \textit{\underline{Superclase}}.\\
+
+\samallskip 2. Las clases hijas también son llamadas ''Clase derivada'' ó \textit{\underline{Subclase}}.\\
+
+3. La herencia respalda el concepto de \textit{\underline{reutilización}}. Al heredar, estamos reutilizando los campos/atributos y métodos de la clase existente.\\
+
+
+4. Java soporta la herencia permitiendo una clase a incorporar otra clase en su declaración. Esto se hace mediante el uso de la palabra clave \textit{\underline{extends}}.\\
+
+
+5. Existen 3 tipos de herencia a través de clases: \textit{\underline{multinivel}},\textit{\underline{ única}} y \textit{\underline{jerárquica}}.\\
+
+6. La clase \textit{\underline{\textbf{Object}}} no tiene superclase, toda clase es implícitamente una subclase de la clase \textit{\underline{Object}}.\\ 
+
+7. Una subclase solo puede tener una super clase. Esto se debe a que Java no admite herencia \textit{\underline{múltiple}} con clases.\\
+
+8. Los \texitf{\underline{constructores}} y métodos/atributos \textit{\underline{privados}} no son heredados a las subclases, pero el costructor de la superclase puede invocarse desde la subclase y acceder a dichos atributos por medio de setter y getters.\\
+\newpage
+9. El \textit{\underline{poliformismo}} en Java y en la POO se refiere a que un objeto puede tomar diferentes formas de comportarse, es decir, que las subclases de una clase pueden definir su propio comportamiento.\\
+
+10. Que pasa si queremos por ejemplo hacer referencia al método constructor del padre o a algún atributo del padre si tal vez dicho atributo se llama igual que el atributo del hijo, habría una confusión. Para esto está la palabra clave \texit{\underline{super}} con la cual podemos hacer referencia a metodos y atributos de la clase padre.
+}
+\end{example}
+
+
+
+
+
+
+ 
+
+\end{document}

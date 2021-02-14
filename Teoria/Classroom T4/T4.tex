@@ -1,0 +1,245 @@
+\documentclass[a4paper]{article}
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,rigth=2.5cm,heightrounded]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{pifont}
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\tcbuselibrary{listingsutf8}
+\usepackage[hidelinks]{hyperref}
+
+% Definir cuadro de ancho del texto
+
+% OPCIONES
+% colback: color de fondo
+% colframe: color de borde
+% fonttitle: estilo de título
+% title: título de la cuadro o referencia a argumento
+
+\title{Introducción a Ciencias de la Computación \\Tarea 4: Scanner y Controles de flujo}
+
+\author{\large Bonilla Ruiz Roberto Adrián}
+
+\date{\large Fecha de entrega: 13 de abril 2020}
+
+\begin{document}
+\maketitle
+
+
+\newtcolorbox[auto counter,number within=section]{example}[2][]
+{colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries, title=~}
+
+{\Large\ding{60}{ Preguntas: } \large{(Primera parte) \smallskip} }
+\begin{enumerate}
+
+
+\\ {  \item\large¿Para qué sirven los parámetros del main \textit{"String arg []" } ?}
+%\section{Ejemplos}
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+Que debe aceptar un argumento de método de tipo arreglo \textit{"String"},pues tomando en cuenta los apuntes de clase, \textit{"String"} representa el tipo de parámetro a recibir,  mientras que \textit{"{arg}"} ó \textit{"{args}"} es el nombre del parámetro, el cual puede tener cualquier nombre siempre y cuando este sea válido. Así mismo, investigando en diversas fuentes se aclara que: \\
+
+ El método main() acepta un parámetro (y solo uno), es decir: Una matriz de tipo String. La cual toma los valores que son introducidos a la hora de ejecutarse desde la línea de comandos, aún así da igual el valor introducido porque el JRE lo convierte a un String.\\ 
+
+
+\small{Fuentes:}
+\url{ https://javautodidacta.es/metodo-main-en-java/} \\
+\phantom{asdfgdfrt}{\url{https://www.asesoriaensig.com.mx/blog/el-metodo-main-en-java/}}
+
+\end{example}\medskip
+
+\\ {\item\large Escribe 5 métodos de Scanner que nos ayuden a tomar los datos de entrada. Agrega su definición del API de JAVA}
+
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+
+
+\begin{center}
+
+\begin{tabular}{| l | l | }
+\hline
+Sintaxis del método & {\smallskip}Definición del API de JAVA (resumido) \\ \hline
+\begin{lstlisting}[language=Java] 
+int nextInt()
+\end{lstlisting} & Recibe un número entero leído del teclado.\\
+
+\begin{lstlisting}[language=Java] 
+byte nexByte()
+\end{lstlisting} & Recibe un byte leído del teclado.\\
+
+
+\begin{lstlisting}[language=Java] 
+float nextFloat()
+\end{lstlisting} & Recibe un número real grande leído del teclado.\\
+
+\begin{lstlisting}[language=Java] 
+short nextShort()
+\end{lstlisting}  & Recibe un número entero pequeño leído del teclado.\\
+
+
+
+\begin{lstlisting}[language=Java] 
+boolean nextBoolean()
+\end{lstlisting} & {Recibe un booleano leído del teclado. }\\\hline
+
+
+
+\end{tabular}
+
+\end{center}
+
+\end{example}\medskip
+
+
+
+
+
+
+\\ {\item\large¿En qué momento se dispara \textit{java.util.InputMismatchException}?}
+
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+ 
+Cuando el tipo de dato de entrada que se espera no es el recibido. 
+
+\end{example}\medskip
+
+\newpage
+
+\item\large Observa y analiza los siguientes códigos:\\   
+
+\newtcolorbox{mybox}[1]{colback=yellow!5!white,colframe=red!75!black,fonttitle=\bfseries,title=#1}
+\begin{mybox}{NOTA}
+ Si hay error de sintaxis o semántica, ¿Como se corrige?\\Deja tu resultado y el resultado de la ejecución, explica cual fue tu error.
+\end{mybox}
+
+%aqui empieza
+ \begin{enumerate}
+        \item 
+            \begin{lstlisting}[language=Java]
+            int i = 0;
+            while(i++ < 4){
+                System.out.println(i);
+            }
+            System.out.println("valor final "+i);
+            \end{lstlisting}
+            
+        \item 
+            \begin{lstlisting}[language=Java]
+            int i = 3;
+            while(i++ < 4){
+                System.out.println(i);
+            }
+            System.out.println("valor final "+i);
+            \end{lstlisting}
+
+        \item 
+            \begin{lstlisting}[language=Java]
+            for(int i  =  0 ;   i < 4 ;   i ++){
+                System.out.println(i);
+            }
+            System.out.println("valor final "+i);
+            \end{lstlisting}
+            
+        \item
+            \begin{lstlisting}[language=Java]
+            for(int i = 0, j = 0; i < 4 && j<3; i+=j){
+                System.out.println(i);
+            }
+            System.out.println("valor final "+j);
+            \end{lstlisting}
+        
+    \end{enumerate}
+%aqui acaba
+
+\\ {\large{4.1 ¿Cuántas veces se itera en los siguientes códigos? \\  \large{4.2 ¿Cual es el valor final de i en cada caso?}}
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | }
+\hline
+
+Inciso & Mi resultado & Resultado de la ejecución & Valor final i \\ \hline
+a)& 4 & 4 &5 \\
+b)& 2 & 4 & 5\\
+c)& 4 & 3 & 4\\
+d)&cero & cero &cero\\ \hline
+\end{tabular}
+\end{center}
+\caption{\bigskip Los errores de semántica o sintaxis se corrigieron cambiando los alcances de las variables o declarandolas ''afuera'' del controlador, mientras que mi error más común fue contar mal mi resultado con respecto al de la ejecución.}
+\end{example}\bigskip
+
+    4.3 ¿Cual es el alcance de la variable i, j en cada caso?
+    \begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+
+a) b)  Como solo tenemos la variable ''i'' y este se encuentra libre de cualquier llave o paréntesis, su alcance es en todo el código. \\ 
+\newline  
+c)  d) Si tomamos el código con errores del pdf es claro que el alcance tanto de ''i'' como de ''j'' solo se limita a los paréntesis, aunque si corregimos esto, nuevamente el alcance que van a tener será para todo el código, por lo que serán variables globales.
+
+\end{example}\bigskip
+
+  %  4.4  \hspace NOTA: Si hay error de sintaxis o semántica, ¿Como se corrige?\\Deja tu resultado y el resultado de la ejecución, explica cual fue tu error.}
+     %\begin{example}
+%[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=}}
+
+%RESPEscribe aqui7
+
+%\end{example}\bigskip\thinspace
+    
+\end{enumerate}
+
+
+
+%segunda sección
+% Cuadro estrecho
+\newtcbox{cuadro}[1]{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~}
+
+
+{\\ \thinspace\Large\ding{74}{ Preguntas: } \large{(Segunda parte)\smallskip  }}
+
+\large Responde lo siguiente:
+    \begin{enumerate}
+        \item ¿Por qué utilizaste esa estructura de control para el manejo del menú?
+        
+        \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+ 
+Porque si hablamos de opciones o casos, el controlador de flujo ''switch'' es el más indicado. 
+
+
+\end{tcolorbox}\bigskip 
+        
+        
+\item Si utilizaste una estructura diferente al switch, ¿Por qué esa implementación es mejor?
+        
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+ 
+Aunque yo utilicé switch, en algún momento llegué a pensar en usar muchos if's anidados (como una alternativa) pero tras dejarnos usar todos los controladores de flujo vistos en el curso, la opción claramente viable es switch. 
+\end{tcolorbox}\bigskip 
+
+        \item ¿Cómo puedes mejorar la robustez de tu código o que medidas tomaste para robustecerlo? Aclaro, no estoy pidiendo la implementación de excepciones en java.
+        
+        \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+ 
+De manera concreta, implenté un mensaje el cual aparece cuando en algunas situaciones el programa no recibe un tipo de dato o valor esperado; lo cual nos lleva a repetir el proceso una y otra vez hasta que los datos sea correctos. 
+
+\end{tcolorbox}\bigskip 
+    \end{enumerate}
+
+
+
+
+
+
+ 
+
+\end{document}

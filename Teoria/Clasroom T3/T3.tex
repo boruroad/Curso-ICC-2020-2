@@ -1,0 +1,168 @@
+\documentclass[a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{ragged2e}
+\usepackage{pifont}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\tcbuselibrary{listingsutf8}
+
+% Definir cuadro de ancho del texto
+
+% OPCIONES
+% colback: color de fondo
+% colframe: color de borde
+% fonttitle: estilo de título
+% title: título de la cuadro o referencia a argumento
+
+\title{Tarea 3 \\ Introducción a Ciencias de la Computación}
+
+\author{\large Bonilla Ruiz Roberto Adrián}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\newtcolorbox[auto counter,number within=section]{example}[2][]
+{colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries, title=~}
+
+{\Large\ding{39}{ Preguntas: } \large{(Primera sección) \smallskip} }
+
+\\ {  a) ¿Por que si sabemos que las cadenas, una vez creadas, no pueden ser modificadas, podemos realizar cada una de las operaciones anteriores y en particular la asignacion en la linea 6?}
+
+%proof
+%\section{Ejemplos}
+
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+ Porque tras haberse creado el objeto de tipo \texttt{String}, en la linea 6, vemos que la variable puede modificar su estado conforme la ejecución del programa, a menos que desde un principio se declare como constante con la palabra reservada \texttt{final}, esta solo puede cambiar de valor, si desde un inicio también se hace de tipo estatica.
+\end{example}\medskip
+
+\\ {(b) ¿Por que las lıneas 9 y 10 regresan el mismo valor si son dos objetos diferentes?}
+
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+ \\Porque \texttt {cadenaOriginal} es estática, lo cual quiere decir que si cambiamos su valor, entonces todos los objetos creados por esa clase tambien cambian.
+\end{example}\medskip
+
+
+
+
+
+\\ {(c) Si en la impresion 9 y 10 da el mismo resultado, ¿Por que en la impresion de la linea 11 y 12 no son iguales?}
+
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+ 
+Porque como el estado de la cadena  "Soy una cadena del objeto" no es estático,quiere decir que si cambia para el, no afecta a todos.
+\end{example}\medskip
+
+\newpage
+
+\\ {(d) Descomenta la lınea 0, debe imprimir en consola un error, ¿Que significa ese error?¿Como se soluciona?}
+
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+El error es por el rango que cada método usa, en el caso del \textit{metodo.lenght()}contamos desde 1, mientras que \textit{charAt()}corrre desde cero).
+Aún asi este problema  se corrige con restarle 1 a la longitud de la cadena:\\
+		\centerline{\textit{(cadena.length()-1)}}\\
+\\De esta forma ambos "parten en cero". 
+\end{example}\bigskip
+
+
+
+
+%segunda sección
+% Cuadro estrecho
+\newtcbox{cuadro}[1]{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~}
+
+
+{\Large\ding{74}{ Preguntas: } \large{(Segunda sección)\smallskip} }
+
+
+
+{(a) Escribe tres formas de creacion de una cadena:}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+ \textit\centering{System.out.println("Primer forma de crear una cadena");\\
+	String cadena = new String("Segunda forma de crear una cadena");\\
+	String nuevacadena = "Tercer forma de crear una cadena";}
+\end{tcolorbox}\bigskip 
+
+
+
+
+
+
+{(b) ¿Cual es el valor por defecto de un objeto \texttt String?}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+ \textit\centering{null}
+\end{tcolorbox}\bigskip 
+
+
+\\ { \qquad ¿Y el valor por defecto de un \texttt char?}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+ \textit\centering{'u0000'}
+\end{tcolorbox}\bigskip
+
+\\ {(c) Escribe dos formas de concatenar cadenas en java:}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+
+	\item{La primer forma es la más sencilla (A través de una impresión).}\smallskip
+
+	\begin{center}\textit{System.out.println("Primer forma " \ + "de concatenar cadenas");}\medskip \end{center}
+\\
+	{La segunda forma requiere crear nuestras cadenás y después imprimirlas con el operador de concatenación.}\smallskip
+
+	\centering\textit{String oracion1 = "Segunda forma "; 
+	\\String oracion2 =" de concatenar cadenas";\\
+	System.out.println(oracion1 + oracion2);}
+
+\end{tcolorbox}\bigskip 
+\newpage
+
+
+
+
+
+\\{(d) ¿Que es ”CAST” en java?}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+{Es un procedimiento para transformar una variable primitiva de un tipo a otro.}
+\end{tcolorbox}\bigskip 
+
+
+ \\{(e) ¿Que hace la siguiente lınea de codigo?\\ }
+
+ \centerline{\hspace{1cm}\texttt{int i = Integer.parseInt(myString);}\smallskip}\\
+ 
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+{Convierte una cadena de texto a un número entero.}
+\end{tcolorbox}\bigskip 
+
+ 
+
+\\{(f) ¿Cual es la diferencia entre argumento y parametro?}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=~]
+ {Un argumento es el valor que se pasa a un parámetro del métdo cuando se le llama.\\
+	
+	El parámetro es el tipo de dato que va a recibir, proveniente del método, además es este quién define si tiene o no parámetros y de ser el caso, especifica su tipo.}
+\end{tcolorbox}\bigskip 
+
+
+ 
+
+
+
+
+
+\end{document}

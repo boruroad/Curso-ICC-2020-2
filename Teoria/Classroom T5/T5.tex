@@ -1,0 +1,141 @@
+\documentclass[a4paper]{article}
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,rigth=2.5cm,heightrounded]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{pifont}
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\tcbuselibrary{listingsutf8}
+\usepackage[hidelinks]{hyperref}
+
+
+% Definir cuadro de ancho del texto
+
+% OPCIONES
+% colback: color de fondo
+% colframe: color de borde
+% fonttitle: estilo de título
+% title: título de la cuadro o referencia a argumento
+
+\title{Introducción a Ciencias de la Computación \\Tarea 5: Busca minas}
+
+\author{\large Bonilla Ruiz Roberto Adrián}
+
+\date{\large Fecha de entrega: 30 de abril 2020}
+
+\begin{document}
+\maketitle
+
+
+\newtcolorbox[auto counter,number within=section]{example}[2][]
+{colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries, title=~}
+
+\begin{enumerate}
+
+
+\\ 
+%\section{Ejemplos}
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+\item\large¿Cuál es la forma correcta de comparar el valor por default? tal que el resultado de la
+comparación sea true. \\ 
+\small{ 
+
+(a) arregloCaracteres [0] ==\textit{  ''}\\
+(b) arregloCaracteres [0] ==\textit{  null}\\
+(c) arregloCaracteres [0] ==\textit{   ''}\\
+(d) arregloCaracteres\,[0] ==\textit{  0}\\
+(e) arregloCaracteres [0] ==\textit{  ' '}\\
+ 
+  
+}
+
+\small{Respuesta:}
+{inciso d)}
+
+\end{example}\medskip
+
+\\
+
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+ {\item\large ¿Qué regresa la terminal si ejecuto lo siguiente?}
+
+            \small\begin{lstlisting}[language=Java]
+            arregloCaracteres [0]  = 'a';
+            System.out.println(arregloCaracteres[0]);
+            \end{lstlisting}
+
+\small{Respuesta:}\\
+{- Regresa ''a'' (sin comillas)}  \\      
+     
+    
+        \\ {\small 2.1 ¿Y si cambiamos el indice a lo siguiente?}
+         \begin{lstlisting}[language=Java]
+            System.out.println(arregloCaracteres[-1]);
+            \end{lstlisting}
+\small{Respuesta:}\\
+{- Lanza una excpeción de tipo: \textit{java.lang.ArrayIndexOutOfBoundsException}}        \\
+
+         \\ {\small 2.2 ¿Y cambiando el indice nuevamente a lo siguiente?}
+         \begin{lstlisting}[language=Java]
+            int maxIndex = arregloCaracteres.length;
+            System.out.println(arregloCaracteres[maxIndex]);
+            \end{lstlisting}
+\small{Respuesta:}\\
+{- Devuelve una excepción \textit{java.lang.ArrayIndexOutOfBoundsException} porque el indice comienza en cero y la longitud en 1, java marca error porque como el indice maximo es asignado como la longitud del arreglo el cual comienza en uno, pero  el indice máximo en realidad es 0. Claramente 1 no es igual a cero.}        
+    
+        
+
+
+\end{example}\medskip
+
+
+
+
+
+
+\\ 
+
+\begin{example}
+[label={ex:serie}]{ \bigskip\textbf{\qquad \qquad Respuesta=} }
+
+\item\large{ ¿Para qué sirve Character.forDigit(a, 10)? ¿Qué valor nos regresarı́a  el siguiente código?}
+
+ \small\begin{lstlisting}[language=Java]
+            int  minas = 4;
+            char minasC = Character.forDigit (minas, 10);
+            int  minas2 = 11;
+            char minasC2 = Character.forDigit (minas2, 10);
+            System.out.println(minasC);
+            System.out.println(minas2);
+            \end{lstlisting}
+\small{Respuesta:}\\            
+- \textit{Character.forDigit} Convierte a carácter el dígito que recibe como primer parámetro y java asume que está expresado en la base que recibe como segundo argumento. \\
+
+- En la primera impresión java regresa 4 y en la segunda 11, con la cualidad de que ahora estos son de tipo \textit{char} cuando inicialmente su tipo de dato era \textit{int}.  
+
+
+
+
+\end{example}\medskip
+
+
+    \end{enumerate}
+
+
+
+
+
+
+ 
+
+\end{document}
