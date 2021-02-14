@@ -1,0 +1,30 @@
+En este documento, se explica como es la sintaxis de nuestros archivos creados y que significan, así como breves ejemplos:
+
+En el archivo que se crea cuando el usuario decide hacer su propio alebrije, se guarda una línea como la siguiente:
+
+-Por ejemplo:
+
+"Cobra,gris,cebra,azul"
+
+(Nosotros dividimos esta cadena en cuatro partes, utilizando como caracter distintivo una coma). -Donde cada parte representa una característica de un Alebrije creado:
+
+Parte 1 : "Cobra" 
+Se refiere a la cabeza del animal para el alebrije.
+
+Parte 2 : "gris"
+Se refiere al color de la cabeza del ALebrije (de la parte 1).
+
+Parte 3 : "cebra"
+Hace alusión al cuerpo del Alebrije, tomado de un animal.
+
+Parte 4 :"azul"
+Se refiere al color del cuerpo del animal para el Alebrije (de la parte 3).
+
+Así cuando el programa lee un archivo con solo esa línea, nosotros creamos un método que le muestra al usuario esto:
+
+ Cabeza de: Cobra 	  ------------> (parte 1).
+ Color de la cabeza: gris ------------> (parte 2).
+ Cuerpo de: cebra         ------------> (parte 3).
+ Color del cuerpo:azul    ------------> (parte 4).
+
+ Lo cual es más amigable y accesible de comprender.

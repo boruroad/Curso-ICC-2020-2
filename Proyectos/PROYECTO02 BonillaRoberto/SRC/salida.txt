@@ -1,0 +1,32 @@
+
+Los tipos de cifrado son 
+ 1---> César 
+ 2---> Rieles 
+ 3---> Kama-sutra
+Escribe tu mensaje a cifrar:
+
+ "Cifrado de César"
+Tu mensaje cifrado es: 
+MBDBTBBNBSJMMB
+De manera descifrada es: 
+LACASAAMARILLA
+
+ "Cifrado de Rieles"
+Tu mensaje cifrado es: 
+LAARLASMIACAAL
+De manera descifrada es: 
+LACASAAMARILLA
+
+
+"Cifrado de Kama-sutra"
+
+El alfabeto revuelto es: 
+WCADPKZQBHIOMLVXTYRGFESUÑJN
+
+El alfabeto ordenado es: 
+ABCDEFGHIJKLMNÑOPQRSTUVWXYZ
+
+El mensaje cifrado es: 
+OWAWGWWMWRBOOW
+De manera descifrada es: 
+LACASAAMARILLA
